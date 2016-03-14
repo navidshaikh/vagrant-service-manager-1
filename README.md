@@ -31,10 +31,21 @@ producing complex, multi-container applications.
 
         config.vm.provision = 'servicemanager'
 
-4. Start the ADB using `vagrant up`. Users of the ADB may wish to consult the
+4. Enable any specific options for the services you have selected:
+
+    * OpenShift
+
+        Specific versions can be specified using the following variables:
+
+        `config.servicemanager.openshift.docker_registry = "docker.io"` - What registry should be pulled from
+        `config.servicemanager.openshift.image_name = "openshift/origin"` - What image should be used
+        `config.servicemanager.openshift.image_tag = "v1.1.1"` - What image version should be used
+
+
+5. Start the ADB using `vagrant up`. Users of the ADB may wish to consult the
 [Installation Documentation](https://github.com/projectatomic/adb-atomic-developer-bundle/blob/master/docs/installing.rst).
 
-5. Run the plugin to get environment variables and certificates:
+6. Run the plugin to get environment variables and certificates:
 
         $ vagrant service-manager env docker
 
@@ -48,7 +59,7 @@ producing complex, multi-container applications.
         # run following command to configure your shell:
         # eval "$(vagrant service-manager env docker)"
 
-6. Begin using your host-based tools.
+7. Begin using your host-based tools.
 
 ## Exit codes
 
