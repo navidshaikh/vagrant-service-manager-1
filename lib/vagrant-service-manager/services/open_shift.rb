@@ -19,6 +19,7 @@ module VagrantPlugins
       end
 
       def self.docker_registry_url(machine)
+        url = ''
         PluginLogger.debug
         command = "sudo oc --config=/var/lib/openshift/openshift.local." +
                   "config/master/admin.kubeconfig get " +
