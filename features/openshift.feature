@@ -36,6 +36,7 @@ Feature: Command output from various OpenShift related commands
     # To use OpenShift CLI, run: oc login https://<ip>:8443
     export OPENSHIFT_URL=https://<ip>:8443
     export OPENSHIFT_WEB_CONSOLE=https://<ip>:8443/console
+    export DOCKER_REGISTRY=hub.openshift.rhel-cdk.<ip>.xip.io
 
     # run following command to configure your shell:
     # eval "$(vagrant service-manager env openshift)"
@@ -47,6 +48,7 @@ Feature: Command output from various OpenShift related commands
     """
     OPENSHIFT_URL=https://<ip>:8443
     OPENSHIFT_WEB_CONSOLE=https://<ip>:8443/console
+    DOCKER_REGISTRY=hub.openshift.rhel-cdk.<ip>.xip.io
     """
 
     Examples:
